@@ -1,6 +1,6 @@
-# TinyApp - Demo app made with Django
+# TinyProject - Demo made with Django
 
-This is a demo app made to show how Django works.
+This is a demo made to show how Django works.
 
 ## How to use
 
@@ -12,7 +12,13 @@ Then, install the requirements using:
 python -m pip install -r requirements.txt
 ```
 
-After that, just run the development server with:
+After that, prepare the database with:
+
+```bash
+python manage.py migrate
+```
+
+Now, just run the development server with:
 
 ```bash
 python manage.py runserver

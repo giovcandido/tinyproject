@@ -13,6 +13,12 @@
 
     <p>Aqui estão suas mensagens:</p>
 
+    {% if not messages %}
+        <blockquote>
+            <small>Sem mensagens. Cadastre algumas!</small>
+        </blockquote>
+    {% endif %}
+    
     {% for message in messages %}
         <blockquote>
             <strong>

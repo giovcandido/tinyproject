@@ -24,4 +24,10 @@ Now, just run the development server with:
 python manage.py runserver
 ```
 
+Additionally, if you want to have access to the admin panel, run:
+
+```bash
+python3 manage.py createsuperuser
+```
+
 Finally, you can acess **http://localhost:8000/** and test the app.

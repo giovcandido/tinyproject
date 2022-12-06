@@ -30,7 +30,7 @@ def about(request):
     context = {
         'title': 'Sobre',
         'app_name': 'TinyApp',
-        'authors': ['Giovani', 'Luiz'],
+        'authors': ['Giovani Candido', 'Luiz Fernando Merli de Oliveira Sementille'],
     }
     
     return render(request, 'tinyapp/about.html', context)

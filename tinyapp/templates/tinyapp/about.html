@@ -1,0 +1,17 @@
+{% extends 'global/base.html' %}
+
+{% block title %}{{ title }} |{% endblock title %}
+
+{% block content %}
+    <h1>Sobre o {{ app_name }}</h1>
+    <p>Esse app foi desenvolvido por:</p>
+
+    <ul>
+        {% for author in authors %}
+            <li>{{ author }}</li>
+        {% endfor %}
+    </ul>
+
+    <p>Foi utilizado Django 4.1.4!</p>
+    <a href="{% url 'tinyapp:index' %}">Retornar à Página Inicial.</a>
+{% endblock content %}

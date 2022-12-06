@@ -1,0 +1,9 @@
+{% extends 'global/base.html' %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block content %}
+    <h1>Bem-vindo ao {{ app_name }}!</h1>
+    <a href="{% url 'tinyapp:messages' %}">Acesse suas mensagens.</a></br>
+    <a href="{% url 'tinyapp:about' %}">Descubra mais sobre o app.</a>
+{% endblock content %}

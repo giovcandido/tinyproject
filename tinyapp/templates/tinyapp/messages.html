@@ -1,0 +1,25 @@
+{% extends 'global/base.html' %}
+
+{% block title %}{{ title }} |{% endblock title %}
+
+{% block content %}
+    <h1>Suas mensagens</h1>
+
+    <form action="{% url 'tinyapp:new_message' %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Nova Mensagem"/>
+    </form>
+
+    <p>Aqui estão suas mensagens:</p>
+
+    {% for message in messages %}
+        <blockquote>
+            <strong>
+                {{ message }}
+            </strong>
+        </blockquote>
+    {% endfor %}
+    
+    <a href="{% url 'tinyapp:index' %}">Retornar à Página Inicial.</a>
+{% endblock content %}
